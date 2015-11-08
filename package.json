@@ -1,6 +1,6 @@
 {
   "name": "ape-highlighting",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ape framework module for highlighting.",
   "main": "lib",
   "scripts": {
