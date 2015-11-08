@@ -23,3 +23,11 @@ exports['Highlight jsx'] = function (test) {
     test.done();
 };
 
+
+exports['From file'] = function (test) {
+    var src = require.resolve('../doc/mocks/mock-jsx.jsx');
+    var highlighted = highlightJsx.fromFile(src);
+    test.ok(highlighted);
+    test.done();
+};
+
