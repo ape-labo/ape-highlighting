@@ -1,6 +1,6 @@
 "use strict";
 
-var React = require('react'),
+const React = require('react'),
     RectDOM = require('react-dom'),
     html = require('apeman-react-html'),
     ApSlider = require('../../lib/ap_slider'),

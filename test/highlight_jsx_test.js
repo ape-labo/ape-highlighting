@@ -2,8 +2,9 @@
  * Test case for highlightJsx.
  * Runs with nodeunit.
  */
+"use strict";
 
-var fs = require('fs'),
+const fs = require('fs'),
     highlightJsx = require('../lib/highlight_jsx.js');
 
 exports.setUp = function (done) {
@@ -15,8 +16,8 @@ exports.tearDown = function (done) {
 };
 
 exports['Highlight jsx'] = function (test) {
-    var src = require.resolve('../doc/mocks/mock-jsx.jsx');
-    var highlighted = highlightJsx(
+    let src = require.resolve('../doc/mocks/mock-jsx.jsx');
+    let highlighted = highlightJsx(
         fs.readFileSync(src).toString()
     );
     test.ok(highlighted);
@@ -25,8 +26,8 @@ exports['Highlight jsx'] = function (test) {
 
 
 exports['From file'] = function (test) {
-    var src = require.resolve('../doc/mocks/mock-jsx.jsx');
-    var highlighted = highlightJsx.fromFile(src);
+    let src = require.resolve('../doc/mocks/mock-jsx.jsx');
+    let highlighted = highlightJsx.fromFile(src);
     test.ok(highlighted);
     test.done();
 };
