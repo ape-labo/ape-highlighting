@@ -70,10 +70,12 @@ Usage
 #### Highlight JSX source code.
 
 ```javascript
-var apeHighlighting = require('ape-highlighting'),
+"use strict";
+
+const apeHighlighting = require('ape-highlighting'),
     fs = require('fs');
 
-var highlighed = apeHighlighting.highlightJsx(
+let highlighed = apeHighlighting.highlightJsx(
     fs.readFileSync(require.resolve('../jsx/some-jsx.jsx'))
 );
 
