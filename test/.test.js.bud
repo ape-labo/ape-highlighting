@@ -2,11 +2,11 @@
  * Bud file for test cases.
  */
 
-"use strict";
+'use strict'
 
-const cozTmpl = require('coz-tmpl');
+const apeTmpl = require('ape-tmpl');
 
-module.exports = cozTmpl.nodeunitTestJsBud({
+module.exports = apeTmpl.mochaTestJsBud({
     src: [
         __dirname + '/../lib/**/*.js'
     ],

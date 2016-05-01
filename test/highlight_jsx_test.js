@@ -1,34 +1,24 @@
 /**
  * Test case for highlightJsx.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
-"use strict";
+'use strict'
 
-const fs = require('fs'),
-    highlightJsx = require('../lib/highlight_jsx.js');
+const fs = require('fs')
+const assert = require('assert')
+const highlightJsx = require('../lib/highlight_jsx.js')
 
-exports.setUp = function (done) {
-    done();
-};
+it('Highlight jsx', () => {
+  let src = require.resolve('../doc/mocks/mock-jsx.jsx')
+  let highlighted = highlightJsx(
+    fs.readFileSync(src).toString()
+  )
+  assert.ok(highlighted)
+})
 
-exports.tearDown = function (done) {
-    done();
-};
-
-exports['Highlight jsx'] = function (test) {
-    let src = require.resolve('../doc/mocks/mock-jsx.jsx');
-    let highlighted = highlightJsx(
-        fs.readFileSync(src).toString()
-    );
-    test.ok(highlighted);
-    test.done();
-};
-
-
-exports['From file'] = function (test) {
-    let src = require.resolve('../doc/mocks/mock-jsx.jsx');
-    let highlighted = highlightJsx.fromFile(src);
-    test.ok(highlighted);
-    test.done();
-};
+it('From file', () => {
+  let src = require.resolve('../doc/mocks/mock-jsx.jsx')
+  let highlighted = highlightJsx.fromFile(src)
+  assert.ok(highlighted)
+})
 
