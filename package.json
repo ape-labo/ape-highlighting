@@ -1,6 +1,6 @@
 {
   "name": "ape-highlighting",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "ape framework module for highlighting.",
   "main": "lib",
   "scripts": {
@@ -22,8 +22,6 @@
   },
   "homepage": "https://github.com/ape-repo/ape-highlighting#readme",
   "dependencies": {
-    "argx": "^2.0.2",
-    "async": "^1.5.2",
     "jsx-syntaxhighlighter": "^0.1.0",
     "node-syntaxhighlighter": "^0.8.1"
   },
